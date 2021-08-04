@@ -7,8 +7,9 @@ export const api = axios.create({
     baseURL: API_URL,
 });
 
-export function SEARCH_MOVIE() {
-
+export function SEARCH_MOVIE(movie) {
+    const url = `/search/movie?api_key=${API_KEY}&query=${movie}&page=1`;
+    return url;
 };
 
 export function GET_TRENDING() {
