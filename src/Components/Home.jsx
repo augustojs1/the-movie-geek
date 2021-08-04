@@ -1,13 +1,19 @@
 import React from 'react';
-import * as Styles from './styles';
+import { api, API_KEY } from '../services/api';
 
 const Home = () => {
+    React.useEffect(() => {
+        async function request() {
+            const response = await api.get(`/search/movie?api_key=${API_KEY}&query=scarface&page=1`);
+            console.log(response.data.results);
+        }
+        
+        request();
+    }, [])
 
     return (
         <div>
-            <Styles.Title backgroundColor="tomato" titleColor="white" >
-                It's Live!
-            </Styles.Title>
+            <h1>It's Live!</h1>
         </div>
     )
 }
