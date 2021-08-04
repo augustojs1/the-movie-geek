@@ -1,5 +1,5 @@
 import React from 'react';
-import api from '../services/api';
+import { api } from '../services/api';
 
 const useAxios = () => {
     const [data, setData] = React.useState(null);
@@ -17,7 +17,7 @@ const useAxios = () => {
             response = null;
             setError(err.message);
         } finally {
-            setData(response);
+            setData(response.data);
             setLoading(false);
             return response;
         }
@@ -30,3 +30,5 @@ const useAxios = () => {
         request,
     };
 };
+
+export default useAxios;
