@@ -1,5 +1,5 @@
 import React from 'react';
-import { api } from '../services/api';
+import { api } from '../Services/api';
 
 const useAxios = () => {
     const [data, setData] = React.useState(null);
