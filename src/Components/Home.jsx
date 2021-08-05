@@ -4,7 +4,7 @@ import { SEARCH_MOVIE, POSTER_URL } from '../services/api';
 
 const Home = () => {
     const { data, loading, error, request } = useAxios();
-    const movie = 'scarface';
+    const movie = 'godfather';
 
     React.useEffect(() => {
         async function fetchSearchMovie() {
@@ -24,7 +24,6 @@ const Home = () => {
             <h1>Your results for: {movie}</h1>
             {data.results.map((movies) => (
                 <div key={movies.id}>
-                    <img src={POSTER_URL + movies.poster_path} alt="poster" />
                     <p>{movies.title}</p>
                 </div>
             ))}
