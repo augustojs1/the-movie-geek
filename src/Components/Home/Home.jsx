@@ -1,5 +1,4 @@
 import React from 'react';
-import { HeaderWrapper } from './styles';
 import Header from './Header/Header';
 import useAxios from '../../Hooks/useAxios';
 import { GET_TRENDING } from '../../Services/api';
@@ -22,14 +21,12 @@ const Home = () => {
   if (loading) return 'Loading';
   if (data)
     return (
-      <HeaderWrapper>
-        <Header
-          backdropPath={data.results[randomMovieIndex].backdrop_path}
-          id={data.results[randomMovieIndex].id}
-          originalTitle={data.results[randomMovieIndex].original_title}
-          overview={data.results[randomMovieIndex].overview}
-        />
-      </HeaderWrapper>
+      <Header
+        backdropPath={data.results[randomMovieIndex].backdrop_path}
+        id={data.results[randomMovieIndex].id}
+        originalTitle={data.results[randomMovieIndex].original_title}
+        overview={data.results[randomMovieIndex].overview}
+      />
     );
   return null;
 };
