@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header/Header';
 import useAxios from '../../Hooks/useAxios';
 import { GET_TRENDING } from '../../Services/api';
+import MovieSection from './MovieSection/MovieSection';
 
 const Home = () => {
   const { data, loading, error, request } = useAxios();
@@ -21,12 +22,15 @@ const Home = () => {
   if (loading) return 'Loading';
   if (data)
     return (
-      <Header
-        backdropPath={data.results[randomMovieIndex].backdrop_path}
-        id={data.results[randomMovieIndex].id}
-        originalTitle={data.results[randomMovieIndex].original_title}
-        overview={data.results[randomMovieIndex].overview}
-      />
+      <>
+        <Header
+          backdropPath={data.results[randomMovieIndex].backdrop_path}
+          id={data.results[randomMovieIndex].id}
+          originalTitle={data.results[randomMovieIndex].original_title}
+          overview={data.results[randomMovieIndex].overview}
+        />
+        <MovieSection />
+      </>
     );
   return null;
 };
