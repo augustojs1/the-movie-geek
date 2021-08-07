@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import TrendingMovieCard from './TrendingMovieCard/TrendingMovieCard';
 import { BACKGROUND_URL } from '../../../Services/api';
 import { HeaderWrapper } from './styles';
 
-const Header = ({ backdropPath, id, originalTitle, overview }) => {
-  console.log(backdropPath, id, originalTitle, overview);
-
-  return (
-    <HeaderWrapper backgroundUrl={BACKGROUND_URL + backdropPath}>
-      <h1>{originalTitle}</h1>
-    </HeaderWrapper>
-  );
-};
+const Header = ({ backdropPath, id, originalTitle, overview }) => (
+  <HeaderWrapper backgroundUrl={BACKGROUND_URL + backdropPath}>
+    <TrendingMovieCard
+      backdropPath={backdropPath}
+      id={id}
+      originalTitle={originalTitle}
+      overview={overview}
+    />
+  </HeaderWrapper>
+);
 
 Header.propTypes = {
   backdropPath: PropTypes.string.isRequired,
