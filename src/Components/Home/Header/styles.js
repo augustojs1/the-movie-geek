@@ -4,10 +4,11 @@ export const HeaderWrapper = styled.header`
   overflow: hidden;
   position: relative;
   display: flex;
-  align-items: center;
-  max-width: 60rem;
-  margin: 0 auto;
-  min-height: 30rem;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 40rem;
+  border-bottom: 1px solid #ec407a;
   &:before {
     content: '';
     background: url(${(props) => props.backgroundUrl});
@@ -18,7 +19,8 @@ export const HeaderWrapper = styled.header`
     width: 100%;
     height: 100%;
     z-index: 1;
-    opacity: 0.3;
+    opacity: 0.2;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
   }

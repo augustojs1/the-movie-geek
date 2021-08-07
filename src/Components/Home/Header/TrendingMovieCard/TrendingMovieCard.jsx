@@ -7,11 +7,11 @@ import {
   TrendingMovieOverview,
 } from './styles';
 
-const TrendingMovieCard = ({ backgroundUrl, id, originalTitle, overview }) => {
-  console.log(backgroundUrl, id, originalTitle, overview);
+const TrendingMovieCard = ({ id, originalTitle, overview }) => {
+  console.log(id, originalTitle, overview);
 
   return (
-    <TrendingMovieWrapper backgroundUrl={backgroundUrl}>
+    <TrendingMovieWrapper>
       <TrendingMovieTitle>{originalTitle}</TrendingMovieTitle>
       <TrendingMovieOverview>{overview}</TrendingMovieOverview>
       <ButtonDetails>Details</ButtonDetails>
@@ -20,7 +20,6 @@ const TrendingMovieCard = ({ backgroundUrl, id, originalTitle, overview }) => {
 };
 
 TrendingMovieCard.propTypes = {
-  backgroundUrl: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   originalTitle: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
