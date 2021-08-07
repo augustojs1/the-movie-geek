@@ -1,20 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TrendingMovieWrapper, TrendingMovieTitle } from './styles';
+import {
+  TrendingMovieWrapper,
+  TrendingMovieTitle,
+  ButtonDetails,
+  TrendingMovieOverview,
+} from './styles';
 
-const TrendingMovieCard = ({ backdropPath, id, originalTitle, overview }) => {
-  console.log(backdropPath, id, originalTitle, overview);
+const TrendingMovieCard = ({ backgroundUrl, id, originalTitle, overview }) => {
+  console.log(backgroundUrl, id, originalTitle, overview);
 
   return (
-    <TrendingMovieWrapper>
+    <TrendingMovieWrapper backgroundUrl={backgroundUrl}>
       <TrendingMovieTitle>{originalTitle}</TrendingMovieTitle>
-      <p>{overview}</p>
+      <TrendingMovieOverview>{overview}</TrendingMovieOverview>
+      <ButtonDetails>Details</ButtonDetails>
     </TrendingMovieWrapper>
   );
 };
 
 TrendingMovieCard.propTypes = {
-  backdropPath: PropTypes.string.isRequired,
+  backgroundUrl: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   originalTitle: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,

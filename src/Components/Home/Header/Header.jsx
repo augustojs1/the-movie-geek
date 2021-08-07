@@ -7,7 +7,6 @@ import { HeaderWrapper } from './styles';
 const Header = ({ backdropPath, id, originalTitle, overview }) => (
   <HeaderWrapper backgroundUrl={BACKGROUND_URL + backdropPath}>
     <TrendingMovieCard
-      backdropPath={backdropPath}
       id={id}
       originalTitle={originalTitle}
       overview={overview}

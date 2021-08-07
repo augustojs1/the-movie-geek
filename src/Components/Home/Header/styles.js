@@ -1,16 +1,27 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
-  background: url(${(props) => props.backgroundUrl}) no-repeat;
-  background-size: 100% 100%;
   overflow: hidden;
-  opacity: 0.4;
+  position: relative;
+  display: flex;
+  align-items: center;
   max-width: 60rem;
   margin: 0 auto;
   min-height: 30rem;
-  /* border: 1px solid red; */
+  &:before {
+    content: '';
+    background: url(${(props) => props.backgroundUrl});
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 `;
 
-export const HeaderNav = styled.header`
-  color: red;
-`;
+export default HeaderWrapper;
