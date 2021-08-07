@@ -19,6 +19,8 @@
     "react/jsx-filename-extension": [
       1,
       { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ]
+    ],
+    "no-unused-vars": "warn",
+    "no-console": "off"
   }
 }

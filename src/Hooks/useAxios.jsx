@@ -1,6 +1,6 @@
 import React from 'react';
 import { api } from '../Services/api';
-    
+
 const useAxios = () => {
   const [data, setData] = React.useState(null);
   const [error, setError] = React.useState(null);
@@ -12,7 +12,8 @@ const useAxios = () => {
       setError(null);
       setLoading(true);
       response = await api.get(url);
-      if (response && response.status !== 200) throw new Error('Request has failed!');
+      if (response && response.status !== 200)
+        throw new Error('Request has failed!');
     } catch (err) {
       response = null;
       setError(err.message);
