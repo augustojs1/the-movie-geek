@@ -9,7 +9,7 @@ import {
 import TrendingMovies from './MovieFilter/TrendingMovies';
 import TopRatedMovies from './MovieFilter/TopRatedMovies';
 import MoviesGenreDropdown from './MovieFilter/MoviesGenreDropdown';
-import NewArrivalsMovies from './MovieFilter/NewArrivalsMovies';
+import UpcomingMovies from './MovieFilter/UpcomingMovies';
 
 const MoviesSection = () => (
   <MovieSectionWrapper>
@@ -23,8 +23,8 @@ const MoviesSection = () => (
           <li>Top Rated</li>
         </NavLink>
 
-        <NavLink to="/new-arrivals" activeClassName="current">
-          <li>New Arrivals</li>
+        <NavLink to="/upcoming-movies" activeClassName="current">
+          <li>Upcoming Movies</li>
         </NavLink>
 
         <NavLink to="/genre" activeClassName="current">
@@ -36,7 +36,7 @@ const MoviesSection = () => (
       <Routes>
         <Route path="/" element={<TrendingMovies />} />
         <Route path="/top-rated" element={<TopRatedMovies />} />
-        <Route path="/new-arrivals" element={<NewArrivalsMovies />} />
+        <Route path="/upcoming-movies" element={<UpcomingMovies />} />
         <Route path="/genre" element={<MoviesGenreDropdown />} />
       </Routes>
     </MovieCardsWrapper>

@@ -1,19 +1,19 @@
 import React from 'react';
 import useAxios from '../../../../Hooks/useAxios';
-import { GET_TOP_RATED, POSTER_URL } from '../../../../Services/api';
+import { GET_UPCOMING, POSTER_URL } from '../../../../Services/api';
 import MovieCard from '../MovieCard/MovieCard';
 import { MovieCardsWrapper } from './styles';
 
-const TopRatedMovies = () => {
+const UpcomingMovies = () => {
   const { data, loading, error, request } = useAxios();
 
   React.useEffect(() => {
-    async function getTopRatedMovies() {
-      const url = GET_TOP_RATED();
+    async function getUpcomingMovies() {
+      const url = GET_UPCOMING();
       await request(url);
     }
     if (data) console.log(data.results);
-    getTopRatedMovies();
+    getUpcomingMovies();
   }, []);
 
   if (error) return 'Error';
@@ -33,4 +33,4 @@ const TopRatedMovies = () => {
   return null;
 };
 
-export default TopRatedMovies;
+export default UpcomingMovies;
