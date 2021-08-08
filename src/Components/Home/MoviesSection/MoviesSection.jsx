@@ -6,10 +6,10 @@ import {
   MovieCardsWrapper,
   NavigationLinks,
 } from './styles';
-import TrendingMovies from './TrendingMovies/TrendingMovies';
-import TopRatedMovies from './TopRatedMovies/TopRatedMovies';
-import NewArrivalsMovies from './NewArrivalsMovies/NewArrivalsMovies';
-import MoviesGenreDropdown from './MoviesGenre/MoviesGenreDropdown';
+import TrendingMovies from './MovieFilter/TrendingMovies';
+import TopRatedMovies from './MovieFilter/TopRatedMovies';
+import MoviesGenreDropdown from './MovieFilter/MoviesGenreDropdown';
+import NewArrivalsMovies from './MovieFilter/NewArrivalsMovies';
 
 const MoviesSection = () => (
   <MovieSectionWrapper>
