@@ -7,17 +7,13 @@ import {
   TrendingMovieOverview,
 } from './styles';
 
-const HeaderMovieInfo = ({ id, originalTitle, overview }) => {
-  console.log(id, originalTitle, overview);
-
-  return (
-    <TrendingMovieWrapper>
-      <TrendingMovieTitle>{originalTitle}</TrendingMovieTitle>
-      <TrendingMovieOverview>{overview}</TrendingMovieOverview>
-      <ButtonDetails>Details</ButtonDetails>
-    </TrendingMovieWrapper>
-  );
-};
+const HeaderMovieInfo = ({ id, originalTitle, overview }) => (
+  <TrendingMovieWrapper>
+    <TrendingMovieTitle>{originalTitle}</TrendingMovieTitle>
+    <TrendingMovieOverview>{overview}</TrendingMovieOverview>
+    <ButtonDetails>Details</ButtonDetails>
+  </TrendingMovieWrapper>
+);
 
 HeaderMovieInfo.propTypes = {
   id: PropTypes.number.isRequired,

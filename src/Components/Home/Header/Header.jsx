@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TrendingMovieCard from './HeaderMovieInfo/HeaderMovieInfo';
+import HeaderMovieInfo from './HeaderMovieInfo/HeaderMovieInfo';
 import { BACKGROUND_URL } from '../../../Services/api';
 import { HeaderWrapper } from './styles';
 
 const Header = ({ backdropPath, id, originalTitle, overview }) => (
   <HeaderWrapper backgroundUrl={BACKGROUND_URL + backdropPath}>
-    <TrendingMovieCard
+    <HeaderMovieInfo
       id={id}
       originalTitle={originalTitle}
       overview={overview}
