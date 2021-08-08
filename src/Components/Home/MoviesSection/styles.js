@@ -9,10 +9,12 @@ export const NavigationLinks = styled.ul`
 
   a {
     text-decoration: none;
+    color: #eee;
   }
 
   li {
     margin-right: 1rem;
+    padding: 0.5rem;
   }
 
   .current {

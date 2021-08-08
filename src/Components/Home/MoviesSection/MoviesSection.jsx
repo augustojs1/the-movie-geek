@@ -15,7 +15,7 @@ const MoviesSection = () => (
   <MovieSectionWrapper>
     <MovieSectionNav>
       <NavigationLinks>
-        <NavLink to="/trending" activeClassName="current">
+        <NavLink to="/" end activeClassName="current">
           <li>Trending</li>
         </NavLink>
 
@@ -34,7 +34,7 @@ const MoviesSection = () => (
     </MovieSectionNav>
     <MovieCardsWrapper>
       <Routes>
-        <Route path="/trending" element={<TrendingMovies />} />
+        <Route path="/" element={<TrendingMovies />} />
         <Route path="/top-rated" element={<TopRatedMovies />} />
         <Route path="/new-arrivals" element={<NewArrivalsMovies />} />
         <Route path="/genre" element={<MoviesGenreDropdown />} />
