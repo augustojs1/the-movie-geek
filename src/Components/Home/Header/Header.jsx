@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TrendingMovieCard from './TrendingMovieCard/TrendingMovieCard';
+import TrendingMovieCard from './HeaderMovieInfo/HeaderMovieInfo';
 import { BACKGROUND_URL } from '../../../Services/api';
 import { HeaderWrapper } from './styles';
 

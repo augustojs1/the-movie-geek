@@ -7,7 +7,7 @@ import {
   TrendingMovieOverview,
 } from './styles';
 
-const TrendingMovieCard = ({ id, originalTitle, overview }) => {
+const HeaderMovieInfo = ({ id, originalTitle, overview }) => {
   console.log(id, originalTitle, overview);
 
   return (
@@ -19,10 +19,10 @@ const TrendingMovieCard = ({ id, originalTitle, overview }) => {
   );
 };
 
-TrendingMovieCard.propTypes = {
+HeaderMovieInfo.propTypes = {
   id: PropTypes.number.isRequired,
   originalTitle: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
 };
 
-export default TrendingMovieCard;
+export default HeaderMovieInfo;
