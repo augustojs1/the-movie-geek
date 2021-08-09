@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header/Header';
 import useAxios from '../../Hooks/useAxios';
 import { GET_TRENDING } from '../../Services/api';
+import MoviesSection from './MoviesSection/MoviesSection';
 
 const Home = () => {
   const { data, loading, error, request } = useAxios();
@@ -28,6 +29,7 @@ const Home = () => {
           originalTitle={data.results[randomMovieIndex].original_title}
           overview={data.results[randomMovieIndex].overview}
         />
+        <MoviesSection />
       </>
     );
   return null;
