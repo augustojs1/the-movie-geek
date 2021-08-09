@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 import MoviePoster from './styles';
 
 const MovieCard = ({ posterUrl, originalTitle }) => (
   <>
-    <a href="/">
+    <Link to="/movie-details">
       <MoviePoster src={posterUrl} alt={originalTitle} />
-    </a>
+    </Link>
   </>
 );
 
