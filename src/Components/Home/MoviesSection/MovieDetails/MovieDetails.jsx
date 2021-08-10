@@ -6,7 +6,12 @@ import {
   BACKGROUND_URL,
 } from '../../../../Services/api';
 import useAxios from '../../../../Hooks/useAxios';
-import { MovieDetailsWrapper, MovieTitle, Details } from './styles';
+import {
+  MovieDetailsWrapper,
+  MovieTitle,
+  Details,
+  DetailsWrapper,
+} from './styles';
 import MoviePoster from './MoviePoster/MoviePoster';
 
 const MovieDetails = () => {
@@ -26,15 +31,15 @@ const MovieDetails = () => {
   if (loading) return 'Loading';
   if (data)
     return (
-      <MovieDetailsWrapper>
+      <MovieDetailsWrapper posterUrl={BACKGROUND_URL + data.backdrop_path}>
         <MoviePoster
           posterUrl={POSTER_URL + data.poster_path}
           posterAlt={data && data.original_title}
         />
-        <div>
+        <DetailsWrapper>
           <MovieTitle>{data && data.original_title}</MovieTitle>
           <Details>{data && data.overview}</Details>
-        </div>
+        </DetailsWrapper>
       </MovieDetailsWrapper>
     );
   return null;
