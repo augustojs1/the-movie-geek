@@ -6,9 +6,9 @@ const MoviePoster = styled.img`
   margin: 0.5rem;
   border-radius: 3px;
   &:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    box-shadow: 1px 1px #ec407a, 2px 2px #ec407a, 3px 3px #ec407a;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
   }
 `;
 
