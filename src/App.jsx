@@ -8,9 +8,9 @@ import MovieDetails from './Components/Home/MoviesSection/MovieDetails/MovieDeta
 function App() {
   return (
     <BrowserRouter>
-      <Home />
       <Routes>
-        <Route path="/movie-details" element={<MovieDetails />} />
+        <Route path="/*" element={<Home />} />
+        <Route path="/movie-details/:id" element={<MovieDetails />} />
       </Routes>
     </BrowserRouter>
   );
