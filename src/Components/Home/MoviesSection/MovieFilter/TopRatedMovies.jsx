@@ -21,13 +21,15 @@ const TopRatedMovies = () => {
   if (data)
     return (
       <MovieCardsWrapper>
-        {data.results.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            posterUrl={POSTER_URL + movie.poster_path}
-            originalTitle={movie.original_title}
-          />
-        ))}
+        {data &&
+          data.results.map((movie) => (
+            <MovieCard
+              key={movie.id}
+              movieId={movie.id}
+              posterUrl={POSTER_URL + movie.poster_path}
+              originalTitle={movie.original_title}
+            />
+          ))}
       </MovieCardsWrapper>
     );
   return null;
