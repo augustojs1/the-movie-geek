@@ -29,7 +29,10 @@ const MovieDetails = () => {
     return (
       <MovieDetailsMain posterUrl={BACKGROUND_URL + data.backdrop_path}>
         <MovieDetailsWrapper>
-          <MoviePoster />
+          <MoviePoster
+            posterUrl={POSTER_URL + data.poster_path}
+            posterAlt={data.original_title}
+          />
           <MovieInformation />
         </MovieDetailsWrapper>
       </MovieDetailsMain>

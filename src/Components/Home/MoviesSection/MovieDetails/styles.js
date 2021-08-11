@@ -5,8 +5,8 @@ export const MovieDetailsMain = styled.main`
   overflow: hidden;
   position: relative;
   max-width: 100%;
-  min-height: 50vh;
   margin: 0 auto;
+  border-bottom: 2px solid #ec407a;
   &:before {
     content: '';
     background: url(${(props) => props.posterUrl});
@@ -16,8 +16,8 @@ export const MovieDetailsMain = styled.main`
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    opacity: 0.1;
+    z-index: -1;
+    opacity: 1;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,6 +26,12 @@ export const MovieDetailsMain = styled.main`
 
 export const MovieDetailsWrapper = styled.section`
   display: flex;
+  background: rgba(51, 51, 51, 0.9);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   max-width: 60rem;
   margin: 0 auto;
+  border-radius: 5px;
+  padding: 3rem;
+  z-index: 1;
 `;
