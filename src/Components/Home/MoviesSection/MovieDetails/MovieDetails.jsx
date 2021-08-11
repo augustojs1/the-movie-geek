@@ -33,7 +33,12 @@ const MovieDetails = () => {
             posterUrl={POSTER_URL + data.poster_path}
             posterAlt={data.original_title}
           />
-          <MovieInformation />
+          <MovieInformation
+            title={data.title}
+            overview={data.overview}
+            releaseDate={data.release_date}
+            rating={data.vote_average}
+          />
         </MovieDetailsWrapper>
       </MovieDetailsMain>
     );
