@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const MovieDetailsWrapper = styled.section`
-  padding-top: 4rem;
+export const MovieDetailsMain = styled.main`
+  padding: 4rem;
   overflow: hidden;
   position: relative;
   max-width: 100%;
+  min-height: 50vh;
   margin: 0 auto;
-  display: flex;
   &:before {
     content: '';
     background: url(${(props) => props.posterUrl});
@@ -24,16 +24,8 @@ export const MovieDetailsWrapper = styled.section`
   }
 `;
 
-export const MovieTitle = styled.h1`
-  font-size: 4rem;
-  color: white;
-  margin-bottom: 1rem;
+export const MovieDetailsWrapper = styled.section`
+  display: flex;
+  max-width: 60rem;
+  margin: 0 auto;
 `;
-
-export const Details = styled.p`
-  line-height: 1rem;
-  font-size: 1.1rem;
-  color: white;
-`;
-
-export const DetailsWrapper = styled.div``;
