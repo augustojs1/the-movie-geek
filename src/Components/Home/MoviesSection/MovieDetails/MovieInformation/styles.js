@@ -14,3 +14,16 @@ export const Paragraph = styled.p`
   line-height: 1.3rem;
   margin-bottom: 3rem;
 `;
+
+export const MovieDuration = styled.p`
+  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  &:before {
+    content: '';
+    background: url('../../../../../Assets/duration-icon.svg');
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+  }
+`;

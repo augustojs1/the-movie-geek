@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MovieInformationWrapper, MovieTitle, Paragraph } from './styles';
+import {
+  MovieInformationWrapper,
+  MovieTitle,
+  Paragraph,
+  MovieDuration,
+} from './styles';
 import MovieRating from './MovieRating/MovieRating';
 
 const MovieInformation = ({ title, overview, releaseDate, rating }) => {
@@ -15,6 +20,7 @@ const MovieInformation = ({ title, overview, releaseDate, rating }) => {
       <MovieTitle>{`${title && title} (${releaseYear})`}</MovieTitle>
       <Paragraph>{overview && overview}</Paragraph>
       <MovieRating rating={rating} />
+      <MovieDuration> 1h 45m</MovieDuration>
     </MovieInformationWrapper>
   );
 };
