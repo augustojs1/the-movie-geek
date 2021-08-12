@@ -40,6 +40,7 @@ const MovieDetails = () => {
             overview={data.overview}
             releaseDate={data.release_date}
             rating={data.vote_average}
+            runtime={data.runtime}
           />
         </MovieDetailsWrapper>
       </MovieDetailsMain>
