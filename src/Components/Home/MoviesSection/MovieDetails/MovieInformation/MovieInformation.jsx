@@ -4,7 +4,10 @@ import {
   MovieInformationWrapper,
   MovieTitle,
   Paragraph,
-  MovieDuration,
+  Wrapper,
+  RatingWrapper,
+  RuntimeWrapper,
+  TitleText,
 } from './styles';
 import MovieRating from './MovieRating/MovieRating';
 
@@ -19,8 +22,14 @@ const MovieInformation = ({ title, overview, releaseDate, rating }) => {
     <MovieInformationWrapper>
       <MovieTitle>{`${title && title} (${releaseYear})`}</MovieTitle>
       <Paragraph>{overview && overview}</Paragraph>
-      <MovieRating rating={rating} />
-      <MovieDuration> 1h 45m</MovieDuration>
+      <Wrapper>
+        <RatingWrapper>
+          <TitleText>IMDB Rating</TitleText> <MovieRating rating={rating} />
+        </RatingWrapper>
+        <RuntimeWrapper>
+          <TitleText>Runtime</TitleText> 1h 45m
+        </RuntimeWrapper>
+      </Wrapper>
     </MovieInformationWrapper>
   );
 };
