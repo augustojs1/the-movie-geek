@@ -11,6 +11,7 @@ import MoviePoster from './MoviePoster/MoviePoster';
 import MovieInformation from './MovieInformation/MovieInformation';
 import Loading from '../../../Helper/Loading/Loading';
 import Error from '../../../Helper/Error/Error';
+import MovieCast from './MovieCast/MovieCast';
 
 const MovieDetails = () => {
   const paramsMovieId = useParams();
@@ -29,21 +30,24 @@ const MovieDetails = () => {
   if (loading) return <Loading />;
   if (data)
     return (
-      <MovieDetailsMain posterUrl={BACKGROUND_URL + data.backdrop_path}>
-        <MovieDetailsWrapper>
-          <MoviePoster
-            posterUrl={POSTER_URL + data.poster_path}
-            posterAlt={data.original_title}
-          />
-          <MovieInformation
-            title={data.title}
-            overview={data.overview}
-            releaseDate={data.release_date}
-            rating={data.vote_average}
-            runtime={data.runtime}
-          />
-        </MovieDetailsWrapper>
-      </MovieDetailsMain>
+      <>
+        <MovieDetailsMain posterUrl={BACKGROUND_URL + data.backdrop_path}>
+          <MovieDetailsWrapper>
+            <MoviePoster
+              posterUrl={POSTER_URL + data.poster_path}
+              posterAlt={data.original_title}
+            />
+            <MovieInformation
+              title={data.title}
+              overview={data.overview}
+              releaseDate={data.release_date}
+              rating={data.vote_average}
+              runtime={data.runtime}
+            />
+          </MovieDetailsWrapper>
+        </MovieDetailsMain>
+        <MovieCast movieId={data.id} />
+      </>
     );
   return null;
 };

@@ -8,7 +8,7 @@ const MovieRating = ({ rating }) => {
       return 'green';
     }
     if (ratingNumber < 7 && ratingNumber >= 6) {
-      return 'yellow';
+      return '#FFC300';
     }
     return 'red';
   }
