@@ -9,22 +9,24 @@ import useAxios from '../../../../Hooks/useAxios';
 import { MovieDetailsMain, MovieDetailsWrapper } from './styles';
 import MoviePoster from './MoviePoster/MoviePoster';
 import MovieInformation from './MovieInformation/MovieInformation';
+import Loading from '../../../Helper/Loading/Loading';
+import Error from '../../../Helper/Error/Error';
 
 const MovieDetails = () => {
-  const params = useParams();
+  const paramsMovieId = useParams();
   const { data, loading, error, request } = useAxios();
 
   React.useEffect(() => {
     async function getMovieById() {
-      const url = GET_MOVIE(params.id);
+      const url = GET_MOVIE(paramsMovieId.id);
       await request(url);
     }
 
     getMovieById();
   }, []);
 
-  if (error) return 'Error';
-  if (loading) return 'Loading';
+  if (error) return <Error errorLog={error} />;
+  if (loading) return <Loading />;
   if (data)
     return (
       <MovieDetailsMain posterUrl={BACKGROUND_URL + data.backdrop_path}>

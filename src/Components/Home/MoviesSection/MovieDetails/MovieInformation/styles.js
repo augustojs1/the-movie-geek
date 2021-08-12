@@ -15,15 +15,27 @@ export const Paragraph = styled.p`
   margin-bottom: 3rem;
 `;
 
-export const MovieDuration = styled.p`
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 30rem;
+  justify-content: space-around;
+`;
+
+export const RatingWrapper = styled.section`
+  text-align: center;
+  max-width: 15rem;
+`;
+
+export const RuntimeWrapper = styled.section`
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const TitleText = styled.p`
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 2rem;
-  display: block;
-  &:before {
-    content: '';
-    background: url('../../../../../Assets/duration-icon.svg');
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-  }
+  line-height: 3rem;
 `;
