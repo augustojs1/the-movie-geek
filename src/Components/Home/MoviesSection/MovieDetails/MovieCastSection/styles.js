@@ -4,6 +4,8 @@ export const CastWrapper = styled.section`
   padding: 2rem 0;
   max-width: 60rem;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0 auto;
 `;
 
