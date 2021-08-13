@@ -6,7 +6,7 @@ export const MovieDetailsMain = styled.main`
   position: relative;
   max-width: 100%;
   margin: 0 auto;
-  border-bottom: 2px solid #ec407a;
+  border-bottom: 1px solid gray;
   &:before {
     content: '';
     background: url(${(props) => props.posterUrl});
@@ -34,4 +34,10 @@ export const MovieDetailsWrapper = styled.section`
   border-radius: 5px;
   padding: 3rem;
   z-index: 1;
+`;
+
+export const MovieCastWrapper = styled.section`
+  max-width: 60rem;
+  display: flex;
+  flex-direction: row;
 `;

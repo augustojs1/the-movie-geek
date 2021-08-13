@@ -11,7 +11,7 @@ import MoviePoster from './MoviePoster/MoviePoster';
 import MovieInformation from './MovieInformation/MovieInformation';
 import Loading from '../../../Helper/Loading/Loading';
 import Error from '../../../Helper/Error/Error';
-import MovieCast from './MovieCastSection/MovieCastSection';
+import MovieCastSection from './MovieCastSection/MovieCastSection';
 
 const MovieDetails = () => {
   const paramsMovieId = useParams();
@@ -46,7 +46,7 @@ const MovieDetails = () => {
             />
           </MovieDetailsWrapper>
         </MovieDetailsMain>
-        <MovieCast movieId={data.id} />
+        <MovieCastSection movieId={data.id} />
       </>
     );
   return null;

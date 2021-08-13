@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CastWrapper, CastTitle } from './styles';
+import { CastSection, CastTitle, CastCardWrapper } from './styles';
 import { GET_CAST, POSTER_URL } from '../../../../../Services/api';
 import useAxios from '../../../../../Hooks/useAxios';
 import Loading from '../../../../Helper/Loading/Loading';
@@ -23,18 +23,22 @@ const MovieCast = ({ movieId }) => {
   if (loading) return <Loading />;
   if (data)
     return (
-      <CastWrapper>
-        <CastTitle>Cast</CastTitle>
-        {data &&
-          data.cast.map((actor) => (
-            <MovieCastCard
-              key={actor.id}
-              name={actor.name}
-              photoUrl={POSTER_URL + actor.profile_path}
-              character={actor.character}
-            />
-          ))}
-      </CastWrapper>
+      <CastSection>
+        <CastTitle>Main Cast</CastTitle>
+        <CastCardWrapper>
+          {data &&
+            data.cast
+              .slice(0, 10)
+              .map((actor) => (
+                <MovieCastCard
+                  key={actor.id}
+                  name={actor.name}
+                  photoUrl={POSTER_URL + actor.profile_path}
+                  character={actor.character}
+                />
+              ))}
+        </CastCardWrapper>
+      </CastSection>
     );
   return null;
 };
