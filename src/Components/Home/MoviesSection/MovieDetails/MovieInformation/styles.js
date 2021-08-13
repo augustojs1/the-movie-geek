@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 30rem;
+  width: 30rem;
   justify-content: space-around;
 `;
 

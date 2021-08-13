@@ -40,6 +40,10 @@ const MovieInformation = ({
         <RatingWrapper>
           <TitleText>IMDB Rating</TitleText> <MovieRating rating={rating} />
         </RatingWrapper>
+        <div>
+          <TitleText>Director</TitleText>
+          <p>Lorem Ipsum</p>
+        </div>
         <RuntimeWrapper>
           <TitleText>Runtime</TitleText> {runtimeInHour}
         </RuntimeWrapper>
