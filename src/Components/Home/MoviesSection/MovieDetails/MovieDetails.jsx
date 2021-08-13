@@ -38,6 +38,7 @@ const MovieDetails = () => {
               posterAlt={data.original_title}
             />
             <MovieInformation
+              movieId={data.id}
               title={data.title}
               overview={data.overview}
               releaseDate={data.release_date}

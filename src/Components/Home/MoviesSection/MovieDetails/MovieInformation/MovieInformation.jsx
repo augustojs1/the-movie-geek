@@ -10,25 +10,18 @@ import {
   TitleText,
 } from './styles';
 import MovieRating from './MovieRating/MovieRating';
+import getReleaseYear from '../../../../../Services/getReleaseYear';
+import getRuntimeInHours from '../../../../../Services/getRuntimeInHours';
 
 const MovieInformation = ({
+  movieId,
   title,
   overview,
   releaseDate,
   rating,
   runtime,
 }) => {
-  function getReleaseYear(movieReleaseDate) {
-    return movieReleaseDate.slice(0, 4);
-  }
-
   const releaseYear = getReleaseYear(releaseDate);
-
-  function getRuntimeInHours(runtimeInMinutes) {
-    const hours = Math.floor(runtimeInMinutes / 60);
-    const minutes = runtimeInMinutes % 60;
-    return `${hours}h ${minutes}m`;
-  }
 
   const runtimeInHour = getRuntimeInHours(runtime);
 
@@ -54,6 +47,7 @@ const MovieInformation = ({
 
 MovieInformation.propTypes = {
   title: PropTypes.string.isRequired,
+  movieId: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   releaseDate: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
