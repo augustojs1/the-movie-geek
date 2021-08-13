@@ -52,7 +52,7 @@ MovieInformation.propTypes = {
   title: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
   releaseDate: PropTypes.string.isRequired,
-  rating: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
   runtime: PropTypes.number.isRequired,
 };
 

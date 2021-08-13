@@ -11,7 +11,7 @@ import MoviePoster from './MoviePoster/MoviePoster';
 import MovieInformation from './MovieInformation/MovieInformation';
 import Loading from '../../../Helper/Loading/Loading';
 import Error from '../../../Helper/Error/Error';
-import MovieCast from './MovieCast/MovieCast';
+import MovieCast from './MovieCastSection/MovieCastSection';
 
 const MovieDetails = () => {
   const paramsMovieId = useParams();
