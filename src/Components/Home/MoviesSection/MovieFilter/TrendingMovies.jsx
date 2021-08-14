@@ -14,7 +14,7 @@ const TrendingMovies = () => {
     }
     if (data) console.log(data.results);
     getTrendingMovies();
-  }, []);
+  }, [request]);
 
   if (error) return 'Error';
   if (loading) return 'Loading';

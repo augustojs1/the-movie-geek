@@ -25,7 +25,7 @@ const MovieDetails = () => {
     }
 
     getMovieById();
-  }, []);
+  }, [request]);
 
   if (error) return <Error errorLog={error} />;
   if (loading) return <Loading />;
@@ -48,7 +48,7 @@ const MovieDetails = () => {
             />
           </MovieDetailsWrapper>
         </MovieDetailsMain>
-        <MovieTrailer movieId={data.id} />
+        <MovieTrailer title={data.title} movieId={data.id} />
         <MovieCastSection movieId={data.id} />
       </>
     );

@@ -14,7 +14,7 @@ const TopRatedMovies = () => {
     }
     if (data) console.log(data.results);
     getTopRatedMovies();
-  }, []);
+  }, [request]);
 
   if (error) return 'Error';
   if (loading) return 'Loading';

@@ -14,7 +14,7 @@ const Home = () => {
     }
     if (data) console.log(data.results);
     getRandomTrendingMovie();
-  }, []);
+  }, [request]);
 
   const randomMovieIndex = Math.floor(Math.random() * 10);
 

@@ -17,7 +17,7 @@ const MovieCast = ({ movieId }) => {
     }
 
     getCastByMovieId(movieId);
-  }, []);
+  }, [request]);
 
   if (error) return <Error errorLog={error} />;
   if (loading) return <Loading />;

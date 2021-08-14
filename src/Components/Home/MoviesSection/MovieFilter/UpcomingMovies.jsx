@@ -12,9 +12,8 @@ const UpcomingMovies = () => {
       const url = GET_UPCOMING();
       await request(url);
     }
-    if (data) console.log(data.results);
     getUpcomingMovies();
-  }, []);
+  }, [request]);
 
   if (error) return 'Error';
   if (loading) return 'Loading';

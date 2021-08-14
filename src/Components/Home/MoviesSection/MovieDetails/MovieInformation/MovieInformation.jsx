@@ -32,7 +32,7 @@ const MovieInformation = ({
     }
 
     getCastByMovieId(movieId);
-  }, []);
+  }, [request]);
 
   let directorName;
 

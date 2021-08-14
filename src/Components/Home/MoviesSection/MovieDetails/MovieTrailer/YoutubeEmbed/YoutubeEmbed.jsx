@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import YoutubeEmbedWrapper from './styles';
+import { YoutubeEmbedWrapper, YoutubeTrailer } from './styles';
 
 const YoutubeEmbed = ({ embedId }) => (
   <YoutubeEmbedWrapper>
-    <iframe
-      width="853"
-      height="480"
+    <YoutubeTrailer
+      width="600"
+      height="320"
       src={`https://www.youtube.com/embed/${embedId}`}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
