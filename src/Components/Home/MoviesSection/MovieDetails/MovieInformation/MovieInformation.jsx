@@ -13,7 +13,7 @@ import MovieRating from './MovieRating/MovieRating';
 import getReleaseYear from '../../../../../Services/getReleaseYear';
 import getRuntimeInHours from '../../../../../Services/getRuntimeInHours';
 import useAxios from '../../../../../Hooks/useAxios';
-import { api, GET_CAST } from '../../../../../Services/api';
+import { GET_CAST } from '../../../../../Services/api';
 
 const MovieInformation = ({
   movieId,
@@ -23,7 +23,7 @@ const MovieInformation = ({
   rating,
   runtime,
 }) => {
-  const { data, loading, error, request } = useAxios();
+  const { data, request } = useAxios();
 
   React.useEffect(() => {
     async function getCastByMovieId(id) {
