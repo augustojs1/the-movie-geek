@@ -48,3 +48,8 @@ export function GET_MOVIE_BY_GENRE(id) {
   const url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`;
   return url;
 }
+
+export function GET_TRAILER_BY_MOVIE_ID(id) {
+  const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`;
+  return url;
+}
