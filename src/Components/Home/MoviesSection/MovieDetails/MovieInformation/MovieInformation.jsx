@@ -12,6 +12,8 @@ import {
 import MovieRating from './MovieRating/MovieRating';
 import getReleaseYear from '../../../../../Services/getReleaseYear';
 import getRuntimeInHours from '../../../../../Services/getRuntimeInHours';
+import useAxios from '../../../../../Hooks/useAxios';
+import { api, GET_CAST } from '../../../../../Services/api';
 
 const MovieInformation = ({
   movieId,
@@ -21,6 +23,26 @@ const MovieInformation = ({
   rating,
   runtime,
 }) => {
+  const { data, loading, error, request } = useAxios();
+
+  React.useEffect(() => {
+    async function getCastByMovieId(id) {
+      const url = GET_CAST(id);
+      await request(url);
+    }
+
+    getCastByMovieId(movieId);
+  }, []);
+
+  let directorName;
+
+  if (data)
+    data.crew.forEach((crewMember) => {
+      if (crewMember.job === 'Director') {
+        directorName = crewMember.name;
+      }
+    });
+
   const releaseYear = getReleaseYear(releaseDate);
 
   const runtimeInHour = getRuntimeInHours(runtime);
@@ -35,7 +57,7 @@ const MovieInformation = ({
         </RatingWrapper>
         <div>
           <TitleText>Director</TitleText>
-          <p>Lorem Ipsum</p>
+          <p>{directorName}</p>
         </div>
         <RuntimeWrapper>
           <TitleText>Runtime</TitleText> {runtimeInHour}
@@ -47,7 +69,7 @@ const MovieInformation = ({
 
 MovieInformation.propTypes = {
   title: PropTypes.string.isRequired,
-  movieId: PropTypes.string.isRequired,
+  movieId: PropTypes.number.isRequired,
   overview: PropTypes.string.isRequired,
   releaseDate: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,

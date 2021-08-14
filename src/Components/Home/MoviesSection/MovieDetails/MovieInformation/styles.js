@@ -35,6 +35,7 @@ export const RuntimeWrapper = styled.section`
 `;
 
 export const TitleText = styled.p`
+  text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 3rem;
