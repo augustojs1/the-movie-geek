@@ -12,7 +12,7 @@ export const MovieTitle = styled.h1`
 export const Paragraph = styled.p`
   font-size: 1rem;
   line-height: 1.3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 `;
 
 export const Wrapper = styled.div`

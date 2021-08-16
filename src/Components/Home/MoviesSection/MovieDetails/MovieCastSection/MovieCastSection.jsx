@@ -9,6 +9,7 @@ import MovieCastCard from './MovieCastCard/MovieCastCard';
 
 const MovieCast = ({ movieId }) => {
   const { data, loading, error, request } = useAxios();
+  const apiLimit = 10;
 
   React.useEffect(() => {
     async function getCastByMovieId(id) {
@@ -28,7 +29,7 @@ const MovieCast = ({ movieId }) => {
         <CastCardWrapper>
           {data &&
             data.cast
-              .slice(0, 10)
+              .slice(0, apiLimit)
               .map((actor) => (
                 <MovieCastCard
                   key={actor.id}
