@@ -12,6 +12,7 @@ import MovieInformation from './MovieInformation/MovieInformation';
 import Loading from '../../../Helper/Loading/Loading';
 import Error from '../../../Helper/Error/Error';
 import MovieCastSection from './MovieCastSection/MovieCastSection';
+import SimilarMoviesSection from './SimilarMoviesSection/SimilarMoviesSection';
 
 const MovieDetails = () => {
   const paramsMovieId = useParams();
@@ -48,6 +49,7 @@ const MovieDetails = () => {
           </MovieDetailsWrapper>
         </MovieDetailsMain>
         <MovieCastSection movieId={data.id} />
+        <SimilarMoviesSection movieId={data.id} />
       </>
     );
   return null;
