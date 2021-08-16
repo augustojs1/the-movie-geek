@@ -12,7 +12,6 @@ import MovieInformation from './MovieInformation/MovieInformation';
 import Loading from '../../../Helper/Loading/Loading';
 import Error from '../../../Helper/Error/Error';
 import MovieCastSection from './MovieCastSection/MovieCastSection';
-import MovieTrailer from './MovieTrailer/MovieTrailer';
 
 const MovieDetails = () => {
   const paramsMovieId = useParams();
@@ -48,7 +47,6 @@ const MovieDetails = () => {
             />
           </MovieDetailsWrapper>
         </MovieDetailsMain>
-        <MovieTrailer title={data.title} movieId={data.id} />
         <MovieCastSection movieId={data.id} />
       </>
     );

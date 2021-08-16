@@ -12,11 +12,8 @@ export const CastCardWrapper = styled.div`
 export const ActorPhoto = styled.img`
   max-width: 6rem;
   max-height: 6rem;
-  border-radius: 4px;
-  display: block;
-  text-align: center;
-  margin-bottom: 0.5rem;
-  border: 1px solid gray;
+  clip-path: circle(50%);
+  object-fit: cover;
 `;
 
 export const ActorName = styled.p`

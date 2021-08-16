@@ -8,12 +8,14 @@ import {
   RatingWrapper,
   RuntimeWrapper,
   TitleText,
+  ButtonWrapper,
 } from './styles';
 import MovieRating from './MovieRating/MovieRating';
 import getReleaseYear from '../../../../../Services/getReleaseYear';
 import getRuntimeInHours from '../../../../../Services/getRuntimeInHours';
 import useAxios from '../../../../../Hooks/useAxios';
 import { GET_CAST } from '../../../../../Services/api';
+import PlayTrailerButton from './PlayTrailerButton/PlayTrailerButton';
 
 const MovieInformation = ({
   movieId,
@@ -63,6 +65,9 @@ const MovieInformation = ({
           <TitleText>Runtime</TitleText> {runtimeInHour}
         </RuntimeWrapper>
       </Wrapper>
+      <ButtonWrapper>
+        <PlayTrailerButton movieId={movieId} />
+      </ButtonWrapper>
     </MovieInformationWrapper>
   );
 };

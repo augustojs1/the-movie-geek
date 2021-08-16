@@ -40,3 +40,9 @@ export const TitleText = styled.p`
   font-weight: bold;
   line-height: 3rem;
 `;
+
+export const ButtonWrapper = styled.div`
+  max-width: 30rem;
+  margin: 1rem;
+  display: flex;
+`;
