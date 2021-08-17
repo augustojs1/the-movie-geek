@@ -34,10 +34,10 @@ const MoviesSection = () => (
     </MovieSectionNav>
     <MovieCardsWrapper>
       <Routes>
-        <Route path="/" element={<TrendingMovies />} />
-        <Route path="/top-rated" element={<TopRatedMovies />} />
-        <Route path="/upcoming-movies" element={<UpcomingMovies />} />
-        <Route path="/genre" element={<MoviesGenreDropdown />} />
+        <Route exact path="/" element={<TrendingMovies />} />
+        <Route exact path="/top-rated" element={<TopRatedMovies />} />
+        <Route exact path="/upcoming-movies" element={<UpcomingMovies />} />
+        <Route exact path="/genre" element={<MoviesGenreDropdown />} />
       </Routes>
     </MovieCardsWrapper>
   </MovieSectionWrapper>

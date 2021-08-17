@@ -6,7 +6,7 @@ const MoviePoster = styled.img`
   margin: 0.5rem;
   border-radius: 3px;
   &:hover {
-    box-shadow: 1px 1px #ec407a, 2px 2px #ec407a, 3px 3px #ec407a;
+    box-shadow: 1px 1px #e43f5a, 2px 2px #e43f5a, 3px 3px #e43f5a;
     -webkit-transform: translateX(-3px);
     transform: translateX(-3px);
   }

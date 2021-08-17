@@ -19,8 +19,8 @@ export const NavigationLinks = styled.ul`
 
   .current {
     li {
-      color: #ec407a;
-      border-bottom: 2px solid #ec407a;
+      color: #e43f5a;
+      border-bottom: 2px solid #e43f5a;
     }
   }
 `;

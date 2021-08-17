@@ -16,6 +16,7 @@ import SimilarMoviesSection from './SimilarMoviesSection/SimilarMoviesSection';
 
 const MovieDetails = () => {
   const paramsMovieId = useParams();
+
   const { data, loading, error, request } = useAxios();
 
   React.useEffect(() => {

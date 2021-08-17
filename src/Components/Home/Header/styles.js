@@ -8,7 +8,7 @@ export const HeaderWrapper = styled.header`
   justify-content: center;
   max-width: 100%;
   min-height: 40rem;
-  border-bottom: 1px solid #ec407a;
+  border-bottom: 1px solid #e43f5a;
   &:before {
     content: '';
     background: url(${(props) => props.backgroundUrl});

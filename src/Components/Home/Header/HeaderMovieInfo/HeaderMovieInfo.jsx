@@ -7,7 +7,7 @@ import {
   TrendingMovieOverview,
 } from './styles';
 
-const HeaderMovieInfo = ({ id, originalTitle, overview }) => (
+const HeaderMovieInfo = ({ originalTitle, overview }) => (
   <TrendingMovieWrapper>
     <TrendingMovieTitle>{originalTitle}</TrendingMovieTitle>
     <TrendingMovieOverview>{overview}</TrendingMovieOverview>
@@ -16,7 +16,6 @@ const HeaderMovieInfo = ({ id, originalTitle, overview }) => (
 );
 
 HeaderMovieInfo.propTypes = {
-  id: PropTypes.number.isRequired,
   originalTitle: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
 };

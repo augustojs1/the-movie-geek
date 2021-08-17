@@ -1,6 +1,10 @@
 import React from 'react';
 import { Loader, LoaderWrapper } from './styles';
 
-const Loading = () => <Loader />;
+const Loading = () => (
+  <LoaderWrapper>
+    <Loader />
+  </LoaderWrapper>
+);
 
 export default Loading;

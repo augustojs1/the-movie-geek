@@ -36,6 +36,7 @@ const SimilarMoviesSection = ({ movieId }) => {
               .slice(0, similarMoviesFetchLimit)
               .map((movie) => (
                 <MovieCard
+                  key={movie.id}
                   movieId={movie.id}
                   posterUrl={POSTER_URL + movie.poster_path}
                   originalTitle={movie.title}
