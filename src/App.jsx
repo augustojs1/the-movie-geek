@@ -8,8 +8,8 @@ import MovieDetails from './components/Home/MoviesSection/MovieDetails/MovieDeta
 function App() {
   return (
     <>
-      <NavigationBar />
       <BrowserRouter>
+        <NavigationBar />
         <Routes>
           <Route path="/*" element={<Home />} />
           <Route path="/movie-details/:id" element={<MovieDetails />} />

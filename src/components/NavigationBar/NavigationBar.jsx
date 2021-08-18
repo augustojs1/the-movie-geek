@@ -1,11 +1,19 @@
 import React from 'react';
-import { Nav, NavWrapper } from './styles';
+import { Link } from 'react-router-dom';
+import { Nav, NavWrapper, Logo, LogoWrapper } from './styles';
+import SearchInput from './SearchInput/SearchInput';
+import { ReactComponent as Glassess } from '../../assets/glasses.svg';
 
 const NavigationBar = () => (
   <Nav>
     <NavWrapper>
-      <h1>The Movie Geek</h1>
-      <input type="search" name="" id="" />
+      <Link to="/">
+        <LogoWrapper>
+          <Glassess />
+          <Logo>TheMovieGeek</Logo>
+        </LogoWrapper>
+      </Link>
+      <SearchInput />
     </NavWrapper>
   </Nav>
 );
