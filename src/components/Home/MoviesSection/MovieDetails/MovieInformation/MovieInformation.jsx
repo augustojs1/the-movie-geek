@@ -11,10 +11,10 @@ import {
   ButtonWrapper,
 } from './styles';
 import MovieRating from './MovieRating/MovieRating';
-import getReleaseYear from '../../../../../Services/getReleaseYear';
-import getRuntimeInHours from '../../../../../Services/getRuntimeInHours';
-import useAxios from '../../../../../Hooks/useAxios';
-import { GET_CAST } from '../../../../../Services/api';
+import getReleaseYear from '../../../../../utils/GetReleaseYear';
+import getRuntimeInHours from '../../../../../utils/GetRuntimeInHours';
+import useAxios from '../../../../../hooks/useAxios';
+import { GET_CAST } from '../../../../../services/api';
 import PlayTrailerButton from './PlayTrailerButton/PlayTrailerButton';
 
 const MovieInformation = ({

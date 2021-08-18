@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CastSection, CastTitle, CastCardWrapper } from './styles';
-import { GET_CAST, POSTER_URL } from '../../../../../Services/api';
-import useAxios from '../../../../../Hooks/useAxios';
+import { GET_CAST, POSTER_URL } from '../../../../../services/api';
+import useAxios from '../../../../../hooks/useAxios';
 import Loading from '../../../../Helper/Loading/Loading';
 import Error from '../../../../Helper/Error/Error';
 import MovieCastCard from './MovieCastCard/MovieCastCard';

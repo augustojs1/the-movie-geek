@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useAxios from '../../../../../Hooks/useAxios';
-import { GET_SIMILAR_MOVIES, POSTER_URL } from '../../../../../Services/api';
+import useAxios from '../../../../../hooks/useAxios';
+import { GET_SIMILAR_MOVIES, POSTER_URL } from '../../../../../services/api';
 import Loading from '../../../../Helper/Loading/Loading';
 import Error from '../../../../Helper/Error/Error';
 import {

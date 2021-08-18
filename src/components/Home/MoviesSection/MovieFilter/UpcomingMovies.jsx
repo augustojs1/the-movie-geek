@@ -1,19 +1,18 @@
 import React from 'react';
-import useAxios from '../../../../Hooks/useAxios';
-import { GET_TRENDING, POSTER_URL } from '../../../../Services/api';
+import useAxios from '../../../../hooks/useAxios';
+import { GET_UPCOMING, POSTER_URL } from '../../../../services/api';
 import MovieCard from '../MovieCard/MovieCard';
 import { MovieCardsWrapper } from './styles';
 
-const TrendingMovies = () => {
+const UpcomingMovies = () => {
   const { data, loading, error, request } = useAxios();
 
   React.useEffect(() => {
-    async function getTrendingMovies() {
-      const url = GET_TRENDING();
+    async function getUpcomingMovies() {
+      const url = GET_UPCOMING();
       await request(url);
     }
-    if (data) console.log(data.results);
-    getTrendingMovies();
+    getUpcomingMovies();
   }, [request]);
 
   if (error) return 'Error';
@@ -35,4 +34,4 @@ const TrendingMovies = () => {
   return null;
 };
 
-export default TrendingMovies;
+export default UpcomingMovies;

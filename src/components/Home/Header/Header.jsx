@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HeaderMovieInfo from './HeaderMovieInfo/HeaderMovieInfo';
-import { BACKGROUND_URL } from '../../../Services/api';
+import { BACKGROUND_URL } from '../../../services/api';
 import { HeaderWrapper } from './styles';
 
 const Header = ({ backdropPath, id, originalTitle, overview }) => (

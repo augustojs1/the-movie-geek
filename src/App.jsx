@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Components/Home/Home';
-import NavigationBar from './Components/NavigationBar/NavigationBar';
-import MovieDetails from './Components/Home/MoviesSection/MovieDetails/MovieDetails';
+import Home from './components/Home/Home';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import MovieDetails from './components/Home/MoviesSection/MovieDetails/MovieDetails';
 
 function App() {
   return (

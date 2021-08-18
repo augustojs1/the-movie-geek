@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header/Header';
-import useAxios from '../../Hooks/useAxios';
-import { GET_TRENDING } from '../../Services/api';
+import useAxios from '../../hooks/useAxios';
+import { GET_TRENDING } from '../../services/api';
 import MoviesSection from './MoviesSection/MoviesSection';
 
 const Home = () => {

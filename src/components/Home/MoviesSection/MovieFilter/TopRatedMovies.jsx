@@ -1,6 +1,6 @@
 import React from 'react';
-import useAxios from '../../../../Hooks/useAxios';
-import { GET_TOP_RATED, POSTER_URL } from '../../../../Services/api';
+import useAxios from '../../../../hooks/useAxios';
+import { GET_TOP_RATED, POSTER_URL } from '../../../../services/api';
 import MovieCard from '../MovieCard/MovieCard';
 import { MovieCardsWrapper } from './styles';
 

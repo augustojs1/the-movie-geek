@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MovieTrailerWrapper, MovieTrailerTitle } from './styles';
-import useAxios from '../../../../../Hooks/useAxios';
-import { GET_TRAILER_BY_MOVIE_ID } from '../../../../../Services/api';
+import useAxios from '../../../../../hooks/useAxios';
+import { GET_TRAILER_BY_MOVIE_ID } from '../../../../../services/api';
 import Loading from '../../../../Helper/Loading/Loading';
 import Error from '../../../../Helper/Error/Error';
 import YoutubeEmbed from './YoutubeEmbed/YoutubeEmbed';

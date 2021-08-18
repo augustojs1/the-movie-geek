@@ -4,8 +4,8 @@ import {
   GET_MOVIE,
   POSTER_URL,
   BACKGROUND_URL,
-} from '../../../../Services/api';
-import useAxios from '../../../../Hooks/useAxios';
+} from '../../../../services/api';
+import useAxios from '../../../../hooks/useAxios';
 import { MovieDetailsMain, MovieDetailsWrapper } from './styles';
 import MoviePoster from './MoviePoster/MoviePoster';
 import MovieInformation from './MovieInformation/MovieInformation';
