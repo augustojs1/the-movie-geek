@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import MovieDetails from './components/Home/MoviesSection/MovieDetails/MovieDetails';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/*" element={<Home />} />
           <Route path="/movie-details/:id" element={<MovieDetails />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
