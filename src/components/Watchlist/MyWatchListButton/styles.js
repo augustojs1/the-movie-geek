@@ -13,6 +13,10 @@ const Button = styled.button`
     background-color: white;
     color: #e43f5a;
   }
+  @media (max-width: 40rem) {
+    margin-top: 0.8rem;
+    padding: 0.3rem 1rem;
+  }
 `;
 
 export default Button;

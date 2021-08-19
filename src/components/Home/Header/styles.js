@@ -24,6 +24,10 @@ export const HeaderWrapper = styled.header`
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  @media (max-width: 40rem) {
+    min-height: 30rem;
+  }
 `;
 
 export default HeaderWrapper;

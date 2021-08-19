@@ -6,6 +6,9 @@ export const TrendingMovieWrapper = styled.section`
   overflow: hidden;
   position: relative;
   color: #fff;
+  @media (max-width: 40rem) {
+    margin-left: 0.5rem;
+  }
 `;
 
 export const ButtonDetails = styled.button`
@@ -24,6 +27,9 @@ export const ButtonDetails = styled.button`
     background-color: white;
     color: #e43f5a;
   }
+  @media (max-width: 40rem) {
+    padding: 0.4rem 1rem;
+  }
 `;
 
 export const TrendingMovieTitle = styled.h1`
@@ -32,6 +38,10 @@ export const TrendingMovieTitle = styled.h1`
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  @media (max-width: 40rem) {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+  }
 `;
 
 export const TrendingMovieOverview = styled.p`
@@ -39,4 +49,8 @@ export const TrendingMovieOverview = styled.p`
   font-size: 1.2rem;
   z-index: 2;
   margin-top: 0.8rem;
+  @media (max-width: 40rem) {
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+  }
 `;

@@ -10,6 +10,10 @@ const MoviePoster = styled.img`
     -webkit-transform: translateX(-3px);
     transform: translateX(-3px);
   }
+  @media (max-width: 40rem) {
+    max-width: 25rem;
+    max-height: 15rem;
+  }
 `;
 
 export default MoviePoster;

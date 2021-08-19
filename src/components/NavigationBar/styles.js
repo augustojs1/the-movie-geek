@@ -9,6 +9,9 @@ export const Nav = styled.nav`
   opacity: initial;
   z-index: 9999;
   box-shadow: #1f4068 2px 2px 2.5px;
+  @media (max-width: 40rem) {
+    padding: 1rem;
+  }
 `;
 
 export const NavWrapper = styled.div`
@@ -16,13 +19,20 @@ export const NavWrapper = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   max-width: 60rem;
-  /* border: 1px solid red; */
   margin: 0 auto;
+  @media (max-width: 40rem) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 40rem) {
+    margin-bottom: 0.8rem;
+  }
 `;
 
 export const Logo = styled.h1`

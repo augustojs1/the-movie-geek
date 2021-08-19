@@ -4,6 +4,9 @@ export const FooterArea = styled.footer`
   background-color: #1b1b2f;
   box-shadow: #1f4068 2px 2px 2.5px;
   padding: 4rem 0;
+  @media (max-width: 40rem) {
+    padding: 1.5rem;
+  }
 `;
 
 export const FooterWrapper = styled.div`

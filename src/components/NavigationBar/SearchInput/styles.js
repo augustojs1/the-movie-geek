@@ -15,6 +15,10 @@ const Input = styled.input`
   &:hover {
     width: 20rem;
   }
+  @media (max-width: 40rem) {
+    width: 12rem;
+    margin-top: 0.3rem;
+  }
 `;
 
 export default Input;
