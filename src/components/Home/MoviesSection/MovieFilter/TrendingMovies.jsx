@@ -3,6 +3,8 @@ import useAxios from '../../../../hooks/useAxios';
 import { GET_TRENDING, POSTER_URL } from '../../../../services/api';
 import MovieCard from '../MovieCard/MovieCard';
 import { MovieCardsWrapper } from './styles';
+import Loading from '../../../Helper/Loading/Loading';
+import Error from '../../../Helper/Error/Error';
 
 const TrendingMovies = () => {
   const { data, loading, error, request } = useAxios();
@@ -16,8 +18,8 @@ const TrendingMovies = () => {
     getTrendingMovies();
   }, [request]);
 
-  if (error) return 'Error';
-  if (loading) return 'Loading';
+  if (error) return <Error errorLog={error} />;
+  if (loading) return <Loading />;
   if (data)
     return (
       <MovieCardsWrapper>

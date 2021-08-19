@@ -14,8 +14,9 @@ export const Nav = styled.nav`
 export const NavWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   max-width: 60rem;
+  /* border: 1px solid red; */
   margin: 0 auto;
 `;
 

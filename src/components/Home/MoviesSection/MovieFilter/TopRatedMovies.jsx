@@ -3,6 +3,8 @@ import useAxios from '../../../../hooks/useAxios';
 import { GET_TOP_RATED, POSTER_URL } from '../../../../services/api';
 import MovieCard from '../MovieCard/MovieCard';
 import { MovieCardsWrapper } from './styles';
+import Loading from '../../../Helper/Loading/Loading';
+import Error from '../../../Helper/Error/Error';
 
 const TopRatedMovies = () => {
   const { data, loading, error, request } = useAxios();
@@ -16,8 +18,8 @@ const TopRatedMovies = () => {
     getTopRatedMovies();
   }, [request]);
 
-  if (error) return 'Error';
-  if (loading) return 'Loading';
+  if (error) return <Error errorLog={error} />;
+  if (loading) return <Loading />;
   if (data)
     return (
       <MovieCardsWrapper>

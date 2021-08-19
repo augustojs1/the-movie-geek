@@ -4,9 +4,7 @@ const Input = styled.input`
   outline: none;
   width: 15rem;
   background-color: #fff;
-  background-position: left center;
-  background-repeat: no-repeat;
-  padding-left: 40px;
+
   color: black;
   padding: 0.4rem;
   font-size: 1rem;
