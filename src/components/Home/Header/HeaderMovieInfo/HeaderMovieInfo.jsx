@@ -3,19 +3,20 @@ import PropTypes from 'prop-types';
 import {
   TrendingMovieWrapper,
   TrendingMovieTitle,
-  ButtonDetails,
   TrendingMovieOverview,
 } from './styles';
+import ButtonDetails from '../ButtonDetails/ButtonDetails';
 
-const HeaderMovieInfo = ({ originalTitle, overview }) => (
+const HeaderMovieInfo = ({ id, originalTitle, overview }) => (
   <TrendingMovieWrapper>
     <TrendingMovieTitle>{originalTitle}</TrendingMovieTitle>
     <TrendingMovieOverview>{overview}</TrendingMovieOverview>
-    <ButtonDetails>Details</ButtonDetails>
+    <ButtonDetails movieId={id}>Details</ButtonDetails>
   </TrendingMovieWrapper>
 );
 
 HeaderMovieInfo.propTypes = {
+  id: PropTypes.number.isRequired,
   originalTitle: PropTypes.string.isRequired,
   overview: PropTypes.string.isRequired,
 };

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterArea = styled.footer`
   background-color: #1b1b2f;
   box-shadow: #1f4068 2px 2px 2.5px;
-  padding: 4rem 0;
+  padding: 2rem 0;
   @media (max-width: 40rem) {
     padding: 1.5rem;
   }
@@ -24,7 +24,7 @@ export const Text = styled.p`
 `;
 
 export const LinkIcon = styled.a`
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-left: 0.5rem;
   display: inline-block;
 `;
