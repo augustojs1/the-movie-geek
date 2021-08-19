@@ -37,7 +37,6 @@ export const MovieDetailsWrapper = styled.section`
   border-radius: 5px;
   padding: 3rem;
   z-index: 1;
-  border: 1px solid red;
   @media (max-width: 60rem) {
     display: flex;
     flex-direction: column;
