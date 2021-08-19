@@ -22,6 +22,9 @@ export const MovieDetailsMain = styled.main`
     background-repeat: no-repeat;
     background-size: cover;
   }
+  @media (max-width: 40rem) {
+    padding: 1rem;
+  }
 `;
 
 export const MovieDetailsWrapper = styled.section`
@@ -34,6 +37,18 @@ export const MovieDetailsWrapper = styled.section`
   border-radius: 5px;
   padding: 3rem;
   z-index: 1;
+  border: 1px solid red;
+  @media (max-width: 60rem) {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  @media (max-width: 40rem) {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
 `;
 
 export const MovieCastWrapper = styled.section`

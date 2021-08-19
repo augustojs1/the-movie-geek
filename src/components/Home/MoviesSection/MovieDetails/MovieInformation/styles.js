@@ -7,6 +7,9 @@ export const MovieInformationWrapper = styled.div`
 export const MovieTitle = styled.h1`
   font-size: 3rem;
   margin-bottom: 1.5rem;
+  @media (max-width: 60rem) {
+    font-size: 2rem;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -39,6 +42,9 @@ export const TitleText = styled.p`
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 3rem;
+  @media (max-width: 60rem) {
+    font-size: 1rem;
+  }
 `;
 
 export const ButtonWrapper = styled.div`

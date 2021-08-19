@@ -7,6 +7,9 @@ export const CastCardWrapper = styled.div`
   flex-wrap: wrap;
   margin: 1rem;
   width: 10rem;
+  @media (max-width: 40rem) {
+    width: 8rem;
+  }
 `;
 
 export const ActorPhoto = styled.img`
@@ -14,6 +17,10 @@ export const ActorPhoto = styled.img`
   max-height: 6rem;
   clip-path: circle(50%);
   object-fit: cover;
+  @media (max-width: 40rem) {
+    max-width: 4rem;
+    max-height: 4rem;
+  }
 `;
 
 export const ActorName = styled.p`
