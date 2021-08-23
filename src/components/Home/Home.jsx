@@ -12,7 +12,7 @@ const Home = () => {
       const url = GET_TRENDING();
       await request(url);
     }
-    if (data) console.log(data.results);
+
     getRandomTrendingMovie();
   }, [request]);
 
