@@ -30,4 +30,5 @@ export const ResultWrapper = styled.ul`
   max-width: 30rem;
   background-color: #1b1b2f;
   border-radius: 3px;
+  overflow-y: scroll;
 `;

@@ -19,7 +19,7 @@ const SearchInput = () => {
     }
   }, [value, request]);
 
-  const maxResults = 15;
+  const maxResults = 20;
 
   return (
     <InputWrapper>
@@ -36,6 +36,7 @@ const SearchInput = () => {
             .slice(0, maxResults)
             .map((movie) => (
               <SearchResults
+                key={movie.id}
                 movieId={movie.id}
                 title={movie.title}
                 posterUrl={POSTER_URL + movie.poster_path}
