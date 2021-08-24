@@ -2,7 +2,7 @@ import React from 'react';
 import { Input, ResultWrapper, InputWrapper } from './styles';
 import { SEARCH_MOVIE, POSTER_URL } from '../../../services/api';
 import useAxios from '../../../hooks/useAxios';
-import MovieCard from '../../Home/MoviesSection/MovieCard/MovieCard';
+import SearchResults from '../SearchResults/SearchResults';
 
 const SearchInput = () => {
   const [value, setValue] = React.useState('');
@@ -19,12 +19,7 @@ const SearchInput = () => {
     }
   }, [value, request]);
 
-  if (data)
-    data.results.forEach((movie) => {
-      console.log(movie);
-    });
-
-  const limitRender = 10;
+  const maxResults = 15;
 
   return (
     <InputWrapper>
@@ -37,15 +32,15 @@ const SearchInput = () => {
       />
       <ResultWrapper>
         {data &&
-          data.results.slice(0, limitRender).map((movie) => (
-            <li>
-              <MovieCard
+          data.results
+            .slice(0, maxResults)
+            .map((movie) => (
+              <SearchResults
                 movieId={movie.id}
+                title={movie.title}
                 posterUrl={POSTER_URL + movie.poster_path}
-                originalTitle={movie.title}
               />
-            </li>
-          ))}
+            ))}
       </ResultWrapper>
     </InputWrapper>
   );

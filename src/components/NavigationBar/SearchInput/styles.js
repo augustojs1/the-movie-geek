@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Input = styled.input`
   outline: none;
-  width: 15rem;
+  width: 20rem;
   background-color: #fff;
   color: black;
   padding: 0.4rem;
@@ -10,10 +10,6 @@ export const Input = styled.input`
   border: none;
   border-radius: 3px;
   border-bottom: 2px solid #e43f5a;
-  transition: width 0.4s ease-in-out;
-  &:hover {
-    width: 20rem;
-  }
   @media (max-width: 40rem) {
     width: 12rem;
     margin-top: 0.3rem;
