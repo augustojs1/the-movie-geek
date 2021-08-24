@@ -19,6 +19,12 @@ export const ResultItem = styled.li`
     align-items: center;
     width: 100%;
     height: 100%;
+
+    &:focus {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0px);
+    }
   }
 `;
 

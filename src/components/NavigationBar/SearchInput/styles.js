@@ -14,6 +14,12 @@ export const Input = styled.input`
     width: 12rem;
     margin-top: 0.3rem;
   }
+
+  &:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+  }
 `;
 
 export const InputWrapper = styled.div`
@@ -30,5 +36,9 @@ export const ResultWrapper = styled.ul`
   max-width: 30rem;
   background-color: #1b1b2f;
   border-radius: 3px;
-  overflow-y: scroll;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+
+  opacity: 0;
+  pointer-events: none;
 `;
