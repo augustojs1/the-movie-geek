@@ -24,6 +24,7 @@ export const Input = styled.input`
 
 export const InputWrapper = styled.div`
   position: relative;
+  overflow: visible;
 `;
 
 export const ResultWrapper = styled.ul`
@@ -38,7 +39,7 @@ export const ResultWrapper = styled.ul`
   border-radius: 3px;
   transform: translateY(-10px);
   transition: all 0.4s ease;
-
   opacity: 0;
   pointer-events: none;
+  overflow-y: scroll;
 `;
