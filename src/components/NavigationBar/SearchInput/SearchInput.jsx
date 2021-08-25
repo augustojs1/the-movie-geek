@@ -3,6 +3,7 @@ import { Input, ResultWrapper, InputWrapper } from './styles';
 import { SEARCH_MOVIE, POSTER_URL } from '../../../services/api';
 import useAxios from '../../../hooks/useAxios';
 import SearchResults from '../SearchResults/SearchResults';
+import ImageNotFound from '../../../assets/image-not-available.png';
 
 const SearchInput = () => {
   const [value, setValue] = React.useState('');
@@ -39,7 +40,11 @@ const SearchInput = () => {
                 key={movie.id}
                 movieId={movie.id}
                 title={movie.title}
-                posterUrl={POSTER_URL + movie.poster_path}
+                posterUrl={
+                  movie.poster_path
+                    ? POSTER_URL + movie.poster_path
+                    : ImageNotFound
+                }
               />
             ))}
       </ResultWrapper>

@@ -6,6 +6,7 @@ import useAxios from '../../../../../hooks/useAxios';
 import Loading from '../../../../Helper/Loading/Loading';
 import Error from '../../../../Helper/Error/Error';
 import MovieCastCard from './MovieCastCard/MovieCastCard';
+import ImageNotFound from '../../../../../assets/image-not-available.png';
 
 const MovieCast = ({ movieId }) => {
   const { data, loading, error, request } = useAxios();
@@ -34,7 +35,11 @@ const MovieCast = ({ movieId }) => {
                 <MovieCastCard
                   key={actor.id}
                   name={actor.name}
-                  photoUrl={POSTER_URL + actor.profile_path}
+                  photoUrl={
+                    actor.profile_path
+                      ? POSTER_URL + actor.profile_path
+                      : ImageNotFound
+                  }
                   character={actor.character}
                 />
               ))}
