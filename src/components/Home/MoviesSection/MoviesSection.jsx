@@ -50,8 +50,13 @@ const MoviesSection = () => (
               </NavLink>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <NavLink to="/genre/adventure" activeClassName="current">
-                Adventure
+              <NavLink to="/genre/comedy" activeClassName="current">
+                Comedy
+              </NavLink>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <NavLink to="/genre/animation" activeClassName="current">
+                Animation
               </NavLink>
             </DropdownMenuItem>
           </MoviesGenreDropdownMenu>
@@ -63,7 +68,7 @@ const MoviesSection = () => (
         <Route exact path="/" element={<TrendingMovies />} />
         <Route exact path="/top-rated" element={<TopRatedMovies />} />
         <Route exact path="/upcoming-movies" element={<UpcomingMovies />} />
-        <Route exact path="/genre" element={<MoviesGenreDropdown />} />
+        <Route exact path="/genre/*" element={<MoviesGenreDropdown />} />
       </Routes>
     </MovieCardsWrapper>
   </MovieSectionWrapper>

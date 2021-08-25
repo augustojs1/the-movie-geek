@@ -55,7 +55,6 @@ export const MoviesGenreDropdownMenu = styled.ul`
   flex-direction: column;
   align-items: center;
   width: 10rem;
-  height: 10rem;
   background-color: #162447;
   border-radius: 3px;
   box-shadow: #1f4068 3px 3px 3.5px;
@@ -82,6 +81,15 @@ export const DropdownMenuItem = styled.li`
   align-items: center;
 
   a {
+    display: flex;
+    align-items: center;
+
+    &:focus {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0px);
+    }
+
     &:hover {
       color: #e43f5a;
     }
