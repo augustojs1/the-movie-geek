@@ -5,6 +5,10 @@ import {
   MovieSectionNav,
   MovieCardsWrapper,
   NavigationLinks,
+  MoviesGenreDropdownMenu,
+  DropdownButton,
+  DropdownMenuContainer,
+  DropdownMenuItem,
 } from './styles';
 import TrendingMovies from './MovieFilter/TrendingMovies';
 import TopRatedMovies from './MovieFilter/TopRatedMovies';
@@ -27,9 +31,31 @@ const MoviesSection = () => (
           <li>Upcoming Movies</li>
         </NavLink>
 
-        <NavLink to="/genre" activeClassName="current">
-          <li>Genre</li>
-        </NavLink>
+        <DropdownMenuContainer>
+          <DropdownButton type="submit">Genre</DropdownButton>
+          <MoviesGenreDropdownMenu>
+            <DropdownMenuItem>
+              <NavLink to="/genre/action" activeClassName="current">
+                Action
+              </NavLink>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <NavLink to="/genre/horror" activeClassName="current">
+                Horror
+              </NavLink>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <NavLink to="/genre/romance" activeClassName="current">
+                Romance
+              </NavLink>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <NavLink to="/genre/adventure" activeClassName="current">
+                Adventure
+              </NavLink>
+            </DropdownMenuItem>
+          </MoviesGenreDropdownMenu>
+        </DropdownMenuContainer>
       </NavigationLinks>
     </MovieSectionNav>
     <MovieCardsWrapper>
