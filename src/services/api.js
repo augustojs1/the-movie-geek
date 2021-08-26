@@ -44,7 +44,7 @@ export function GET_SIMILAR_MOVIES(id) {
   return url;
 }
 
-export function GET_MOVIE_BY_GENRE(id) {
+export function GET_MOVIES_BY_GENRE(id) {
   const url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`;
   return url;
 }

@@ -12,8 +12,8 @@ import {
 } from './styles';
 import TrendingMovies from './MovieFilter/TrendingMovies';
 import TopRatedMovies from './MovieFilter/TopRatedMovies';
-import MoviesGenreDropdown from './MovieFilter/MoviesGenreDropdown';
 import UpcomingMovies from './MovieFilter/UpcomingMovies';
+import MoviesGenre from './MoviesGenre/MoviesGenre';
 
 const MoviesSection = () => (
   <MovieSectionWrapper>
@@ -68,7 +68,7 @@ const MoviesSection = () => (
         <Route exact path="/" element={<TrendingMovies />} />
         <Route exact path="/top-rated" element={<TopRatedMovies />} />
         <Route exact path="/upcoming-movies" element={<UpcomingMovies />} />
-        <Route exact path="/genre/*" element={<MoviesGenreDropdown />} />
+        <Route exact path="/genre/:genre" element={<MoviesGenre />} />
       </Routes>
     </MovieCardsWrapper>
   </MovieSectionWrapper>

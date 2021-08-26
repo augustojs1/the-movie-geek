@@ -1,4 +1,4 @@
-const MovieGenreId = {
+const MovieGenreIds = {
   action: 28,
   adventure: 12,
   animation: 16,
@@ -7,4 +7,4 @@ const MovieGenreId = {
   romance: 10749,
 };
 
-export default MovieGenreId;
+export default MovieGenreIds;
