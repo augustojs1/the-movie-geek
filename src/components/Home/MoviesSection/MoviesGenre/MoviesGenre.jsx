@@ -11,20 +11,22 @@ import {
 import Error from '../../../Helper/Error/Error';
 import Loading from '../../../Helper/Loading/Loading';
 import MovieCard from '../MovieCard/MovieCard';
+import Pagination from '../Pagination/Pagination';
+import usePagination from '../../../../hooks/usePagination';
 
 const MoviesGenre = () => {
   const params = useParams();
+  const { page, setPage } = usePagination();
   const { data, loading, error, request } = useAxios();
-  const maxResults = 20;
 
   React.useEffect(() => {
     async function getMoviesByGenreId(genreId) {
-      const url = GET_MOVIES_BY_GENRE(genreId);
+      const url = GET_MOVIES_BY_GENRE(genreId, page);
       await request(url);
     }
 
     getMoviesByGenreId(MovieGenreIds[params.genre]);
-  }, [params, request]);
+  }, [params, request, page]);
 
   if (error) return <Error errorLog={error} />;
   if (loading) return <Loading />;
@@ -35,7 +37,7 @@ const MoviesGenre = () => {
         <MoviesGenreCardsWrapper>
           {data &&
             data.results
-              .slice(0, maxResults)
+              .slice(0, 20)
               .map((movie) => (
                 <MovieCard
                   key={movie.id}
@@ -45,6 +47,7 @@ const MoviesGenre = () => {
                 />
               ))}
         </MoviesGenreCardsWrapper>
+        <Pagination setPage={setPage} />
       </MovieGenreWrapper>
     );
   return null;
