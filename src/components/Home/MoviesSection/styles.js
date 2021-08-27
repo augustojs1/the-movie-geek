@@ -58,6 +58,7 @@ export const MoviesGenreDropdownMenu = styled.ul`
   background-color: #162447;
   border-radius: 3px;
   box-shadow: #1f4068 3px 3px 3.5px;
+  border-left: 2px solid #1f4068;
   left: 0px;
   z-index: 999;
   opacity: 0;
@@ -109,9 +110,18 @@ export const DropdownButton = styled.button`
     margin: 1rem 0;
   }
 
+  &:after {
+    content: '▼';
+    margin-left: 0.3rem;
+  }
+
   &:focus + ul {
     opacity: 1;
     pointer-events: all;
     transform: translateY(0px);
+
+    &:after {
+      transform: rotate(90deg);
+    }
   }
 `;

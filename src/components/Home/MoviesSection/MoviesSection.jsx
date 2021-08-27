@@ -32,7 +32,7 @@ const MoviesSection = () => (
         </NavLink>
 
         <DropdownMenuContainer>
-          <DropdownButton type="submit">Genre</DropdownButton>
+          <DropdownButton type="submit">Genres</DropdownButton>
           <MoviesGenreDropdownMenu>
             <DropdownMenuItem>
               <NavLink to="/genre/action" activeClassName="current">

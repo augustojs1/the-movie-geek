@@ -36,16 +36,14 @@ const MoviesGenre = () => {
         <MovieGenreTitle>{params.genre} Movies</MovieGenreTitle>
         <MoviesGenreCardsWrapper>
           {data &&
-            data.results
-              .slice(0, 20)
-              .map((movie) => (
-                <MovieCard
-                  key={movie.id}
-                  movieId={movie.id}
-                  posterUrl={POSTER_URL + movie.poster_path}
-                  originalTitle={movie.title}
-                />
-              ))}
+            data.results.map((movie) => (
+              <MovieCard
+                key={movie.id}
+                movieId={movie.id}
+                posterUrl={POSTER_URL + movie.poster_path}
+                originalTitle={movie.title}
+              />
+            ))}
         </MoviesGenreCardsWrapper>
         <Pagination setPage={setPage} />
       </MovieGenreWrapper>
