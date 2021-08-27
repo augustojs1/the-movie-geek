@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const MovieGenreWrapper = styled.section`
-  padding: 2rem 0;
+  padding: 0.5rem 0;
   max-width: 60rem;
   margin: 0 auto;
 `;

@@ -8,4 +8,8 @@ export const MovieCardsWrapper = styled.section`
   max-width: 60rem;
 `;
 
-export default MovieCardsWrapper;
+export const PaginationWrapper = styled.div`
+  text-align: center;
+  width: 95%;
+  margin-bottom: 1rem;
+`;

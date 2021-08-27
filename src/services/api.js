@@ -14,18 +14,18 @@ export function SEARCH_MOVIE(movie) {
   return url;
 }
 
-export function GET_TRENDING() {
-  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=1`;
+export function GET_TRENDING(pageNumber) {
+  const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${pageNumber}`;
   return url;
 }
 
-export function GET_TOP_RATED() {
-  const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&page=1`;
+export function GET_TOP_RATED(pageNumber) {
+  const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&page=${pageNumber}`;
   return url;
 }
 
-export function GET_UPCOMING() {
-  const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&page=1`;
+export function GET_UPCOMING(pageNumber) {
+  const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&page=${pageNumber}`;
   return url;
 }
 

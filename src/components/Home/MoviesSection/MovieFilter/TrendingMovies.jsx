@@ -2,21 +2,25 @@ import React from 'react';
 import useAxios from '../../../../hooks/useAxios';
 import { GET_TRENDING, POSTER_URL } from '../../../../services/api';
 import MovieCard from '../MovieCard/MovieCard';
-import { MovieCardsWrapper } from './styles';
+import { MovieCardsWrapper, PaginationWrapper } from './styles';
 import Loading from '../../../Helper/Loading/Loading';
 import Error from '../../../Helper/Error/Error';
+import Pagination from '../Pagination/Pagination';
+import usePagination from '../../../../hooks/usePagination';
 
 const TrendingMovies = () => {
+  const { page, setPage } = usePagination();
+
   const { data, loading, error, request } = useAxios();
 
   React.useEffect(() => {
     async function getTrendingMovies() {
-      const url = GET_TRENDING();
+      const url = GET_TRENDING(page);
       await request(url);
     }
-    if (data) console.log(data.results);
+
     getTrendingMovies();
-  }, [request]);
+  }, [request, page]);
 
   if (error) return <Error errorLog={error} />;
   if (loading) return <Loading />;
@@ -32,6 +36,9 @@ const TrendingMovies = () => {
               originalTitle={movie.original_title}
             />
           ))}
+        <PaginationWrapper>
+          <Pagination setPage={setPage} />
+        </PaginationWrapper>
       </MovieCardsWrapper>
     );
   return null;
