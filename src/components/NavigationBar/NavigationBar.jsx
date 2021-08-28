@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Nav, NavWrapper, Logo, LogoWrapper } from './styles';
+import {
+  Nav,
+  NavWrapper,
+  Logo,
+  LogoWrapper,
+  MyWatchListButtonWrapper,
+} from './styles';
 import SearchInput from './SearchInput/SearchInput';
 import { ReactComponent as Glassess } from '../../assets/glasses.svg';
 import MyWatchListButton from '../Watchlist/MyWatchListButton/MyWatchListButton';
@@ -15,7 +21,9 @@ const NavigationBar = () => (
         </LogoWrapper>
       </Link>
       <SearchInput />
-      <MyWatchListButton />
+      <MyWatchListButtonWrapper>
+        <MyWatchListButton />
+      </MyWatchListButtonWrapper>
     </NavWrapper>
   </Nav>
 );

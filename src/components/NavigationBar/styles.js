@@ -44,3 +44,7 @@ export const Logo = styled.h1`
     background: url('./../../assets/glasses.svg');
   }
 `;
+
+export const MyWatchListButtonWrapper = styled.div`
+  position: relative;
+`;
