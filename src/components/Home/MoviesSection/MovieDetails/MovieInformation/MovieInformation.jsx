@@ -16,6 +16,7 @@ import getRuntimeInHours from '../../../../../utils/GetRuntimeInHours';
 import useAxios from '../../../../../hooks/useAxios';
 import { GET_CAST } from '../../../../../services/api';
 import PlayTrailerButton from './PlayTrailerButton/PlayTrailerButton';
+import AddToWatchListButton from '../AddToWatchListButton/AddToWatchListButton';
 
 const MovieInformation = ({
   movieId,
@@ -66,6 +67,7 @@ const MovieInformation = ({
         </RuntimeWrapper>
       </Wrapper>
       <ButtonWrapper>
+        <AddToWatchListButton />
         <PlayTrailerButton movieId={movieId} />
       </ButtonWrapper>
     </MovieInformationWrapper>
