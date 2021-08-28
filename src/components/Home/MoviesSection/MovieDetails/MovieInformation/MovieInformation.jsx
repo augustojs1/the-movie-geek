@@ -67,7 +67,7 @@ const MovieInformation = ({
         </RuntimeWrapper>
       </Wrapper>
       <ButtonWrapper>
-        <AddToWatchListButton />
+        <AddToWatchListButton movieId={movieId} />
         <PlayTrailerButton movieId={movieId} />
       </ButtonWrapper>
     </MovieInformationWrapper>
