@@ -5,10 +5,11 @@ import { GlobalContext } from '../../../../../contexts/GlobalContext';
 
 const AddToWatchListButton = ({ movieId, title }) => {
   const global = React.useContext(GlobalContext);
+  const watchlistMovie = { id: movieId, title };
 
   function handleClick() {
-    global.setWatchlist((watchlist) => [...watchlist, title]);
-    console.log(global.watchlist);
+    global.setWatchlist((watchlist) => [...watchlist, watchlistMovie]);
+    localStorage.setItem('watchlist', JSON.stringify(global.watchlist));
   }
 
   return <Button onClick={handleClick}>+ Watchlist</Button>;

@@ -10,16 +10,17 @@ import { GlobalStorage } from './contexts/GlobalContext';
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <GlobalStorage>
+      <GlobalStorage>
+        <BrowserRouter>
           <NavigationBar />
           <Routes>
             <Route path="/*" element={<Home />} />
             <Route path="/movie-details/:id" element={<MovieDetails />} />
           </Routes>
-        </GlobalStorage>
-        <Footer />
-      </BrowserRouter>
+
+          <Footer />
+        </BrowserRouter>
+      </GlobalStorage>
     </>
   );
 }
