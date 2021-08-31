@@ -6,6 +6,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import MovieDetails from './components/Home/MoviesSection/MovieDetails/MovieDetails';
 import Footer from './components/Footer/Footer';
 import { GlobalStorage } from './contexts/GlobalContext';
+import PageNotFound from './components/Helper/PageNotFound/PageNotFound';
 
 function App() {
   return (
@@ -16,8 +17,8 @@ function App() {
           <Routes>
             <Route path="/*" element={<Home />} />
             <Route path="/movie-details/:id" element={<MovieDetails />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
-
           <Footer />
         </BrowserRouter>
       </GlobalStorage>
