@@ -12,7 +12,9 @@ const MyWatchListButton = () => {
         {global.watchlist &&
           global.watchlist.map((movie) => (
             <WatchListItem key={movie.id}>
-              <a href="!#">{movie.title}</a>
+              <a href="!#" onClick={() => console.log('Click!')}>
+                {movie.title}
+              </a>
             </WatchListItem>
           ))}
       </WatchListDropwdownMenu>
